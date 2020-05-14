@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Morrow`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Accelerating the green energy transition`,
+    author: `@morrowbatteries`,
+    canonical: `https://morrowbatteries.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,8 +21,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: `https://morrow.energy`,
-        sitemap: `https://morrow.energy/sitemap.xml`,
+        host: `https://morrowbatteries.com`,
+        sitemap: `https://morrowbatteries.com/sitemap.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -47,13 +48,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `MORROW`,
+        short_name: `MORROW`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/MORROW-FAVICON.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
