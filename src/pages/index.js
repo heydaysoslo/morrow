@@ -21,8 +21,12 @@ const IndexPage = () => {
 }
 
 const A = styled.a`
-  text-decoration: underline;
   color: currentColor;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &:visited,
   &:focus {
@@ -39,14 +43,23 @@ const Page = styled.article`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: ${SPACING}px;
+  padding: ${SPACING / 2}px;
+
+  @media screen and (min-width: 500px) {
+    padding: ${SPACING}px;
+  }
 
   ${Logo} {
     max-width: 570px;
     margin: 0 auto;
     width: 100%;
-    padding-top: ${SPACING / 2}px;
-    padding-bottom: ${SPACING / 2}px;
+    padding-top: ${SPACING / 4}px;
+    padding-bottom: ${SPACING / 4}px;
+
+    @media screen and (min-width: 500px) {
+      padding-top: ${SPACING / 2}px;
+      padding-bottom: ${SPACING / 2}px;
+    }
   }
 `
 

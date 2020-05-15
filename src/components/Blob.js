@@ -1,23 +1,35 @@
 import React, { useState } from "react"
 import SimplexNoise from "simplex-noise"
+import { motion } from "framer-motion"
+import styled from "styled-components"
 
 import useInterval from "./hooks/useInterval"
+import { random } from "../utils/helpers"
+import { css } from "styled-components"
 
 const Blob = ({
   seed = 4,
   play = true, // Boolean value to "pause" the blob animation
-  color = "#3CD01E",
   speed = 0.005, // Speed of the animation
   xMan = 1,
   yMan = 1,
   intensity = 10, // Amount of diversion in the individual vector (point) radius
   vectorAmount = 10, // Amount of vectors (points). Controls the complexity of the shape
   maskRadius = 38, // The radius of the mask circle
+  startColor,
+  strokeWidth,
+  colors,
+  stroke,
   ...props
 }) => {
   const [path, setPath] = useState([])
   const [time, setTime] = useState(0)
+  const [color, setColor] = useState(startColor)
   // const [animate, setAnimate] = useState(true)
+
+  useInterval(() => {
+    setColor(colors[random(0, colors.length)])
+  }, 8000)
 
   // Generate simplex noise values
   const simplex = new SimplexNoise(seed)
@@ -27,7 +39,7 @@ const Blob = ({
     return newPoints.reduce((string, point, index) => {
       const { x, y } = point
       string += `
-        ${index !== 0 ? "L" : ""}${x} ${y}
+        ${index !== 0 ? "T" : ""}${x} ${y}
         ${index === newPoints.length - 1 ? `Z` : ","}
       `
       return string
@@ -64,23 +76,31 @@ const Blob = ({
     // }
   }, 1)
   return (
-    <svg viewBox="0 0 100 100" {...props}>
+    <SVG
+      color={color}
+      stroke={stroke}
+      viewBox="0 0 100 100"
+      {...props}
+      style={{ overflow: "visible" }}
+    >
       <path
-        fill={color}
         d={path}
         style={{
-          // transform: `scale(${animate ? 1 : 0.8})`,
-          // transform: `scale(${animate ? 0.8 : 0.5})`,
           transformOrigin: "center center",
-          transition: "transform 2s ease",
+          transition: "transform 2s ease, fill 5s ease, stroke 5s ease",
         }}
       />
-      {/* <circle cx="50" cy="50" r={maskRadius} fill={color} /> */}
-      {/* <text x="50" y="50" textAnchor="middle" fontSize="2px">
-        Hello
-      </text> */}
-    </svg>
+    </SVG>
   )
 }
+
+const SVG = styled.svg(
+  ({ stroke, color }) => css`
+    path {
+      fill: ${stroke ? "transparent" : color};
+      stroke: ${stroke ? color : "transparent"};
+    }
+  `
+)
 
 export default Blob

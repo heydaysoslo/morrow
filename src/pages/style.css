@@ -2,6 +2,11 @@ html {
   font-size: 62.5%;
 }
 
+::selection {
+  background: black;
+  color: white;
+}
+
 html,
 body {
   height: 100%;
