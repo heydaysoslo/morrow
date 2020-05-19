@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Page>
         <p>Accelerating the green energy transition</p>
         <Logo />
-        <A href="mailto:hello@morrow.energy">Contact</A>
+        <A href="mailto:paal.brun@morrowbatteries.com">Contact</A>
       </Page>
     </Layout>
   )
@@ -45,18 +45,19 @@ const Page = styled.article`
   align-items: center;
   padding: ${SPACING / 2}px;
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 700px) {
     padding: ${SPACING}px;
   }
 
   ${Logo} {
-    max-width: 570px;
+    max-width: 370px;
     margin: 0 auto;
     width: 100%;
     padding-top: ${SPACING / 4}px;
     padding-bottom: ${SPACING / 4}px;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 700px) {
+      max-width: 570px;
       padding-top: ${SPACING / 2}px;
       padding-bottom: ${SPACING / 2}px;
     }
