@@ -45,7 +45,7 @@ const Page = styled.article`
   align-items: center;
   padding: ${SPACING / 2}px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 900px) {
     padding: ${SPACING}px;
   }
 
@@ -56,7 +56,7 @@ const Page = styled.article`
     padding-top: ${SPACING / 4}px;
     padding-bottom: ${SPACING / 4}px;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 900px) {
       max-width: 570px;
       padding-top: ${SPACING / 2}px;
       padding-bottom: ${SPACING / 2}px;

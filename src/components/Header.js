@@ -51,7 +51,7 @@ const Wrapper = styled.div(
     filter: blur(10px);
     will-change: filter;
     transform: translateZ(0);
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 900px) {
       filter: blur(30px);
     }
 
