@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import SimplexNoise from "simplex-noise"
-import { motion } from "framer-motion"
 import styled from "styled-components"
 
 import useInterval from "./hooks/useInterval"

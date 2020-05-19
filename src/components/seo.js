@@ -1,5 +1,4 @@
 import React from "react"
-import styled, { css } from "styled-components"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import { useStaticQuery, graphql } from "gatsby"
 

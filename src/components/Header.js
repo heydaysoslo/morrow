@@ -2,7 +2,6 @@ import React from "react"
 import styled, { css } from "styled-components"
 import Blob from "./Blob"
 import { random } from "../utils/helpers"
-import shuffle from "lodash/shuffle"
 
 const ALLCOLORS = ["#8754FF", "#45C0FF", "#34DFA0", "#B3F456"]
 const RANDOM_NUMBER = random(0, ALLCOLORS.length)
