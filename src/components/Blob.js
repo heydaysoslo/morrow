@@ -93,7 +93,7 @@ const Blob = ({
   )
 }
 
-const SVG = styled.svg(
+const SVG = styled(({ stroke, color, ...rest }) => <svg {...rest} />)(
   ({ stroke, color }) => css`
     path {
       fill: ${stroke ? "transparent" : color};
