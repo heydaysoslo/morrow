@@ -16,13 +16,13 @@ const IndexPage = () => {
         <Logo />
         <div>
           <A href="mailto:paal.brun@morrowbatteries.com">Contact</A>
-          <A
+          {/* <A
             target="_blank"
             rel="noreferrer noopener"
             href="https://www.dropbox.com/sh/geebec5kkea5of7/AABaPRafEMx6xj9xD4ywua_9a?dl=0"
           >
             Press pack
-          </A>
+          </A> */}
         </div>
       </Page>
     </Layout>
