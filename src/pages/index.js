@@ -14,7 +14,16 @@ const IndexPage = () => {
       <Page>
         <p>Accelerating the green energy transition</p>
         <Logo />
-        <A href="mailto:paal.brun@morrowbatteries.com">Contact</A>
+        <div>
+          <A href="mailto:paal.brun@morrowbatteries.com">Contact</A>
+          <A
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://www.dropbox.com/sh/geebec5kkea5of7/AABaPRafEMx6xj9xD4ywua_9a?dl=0"
+          >
+            Press pack
+          </A>
+        </div>
       </Page>
     </Layout>
   )
@@ -23,6 +32,7 @@ const IndexPage = () => {
 const A = styled.a`
   color: currentColor;
   text-decoration: none;
+  margin: 15px;
 
   &:hover {
     text-decoration: underline;
