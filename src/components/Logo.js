@@ -21,7 +21,7 @@ const Logo = ({ className, fill = "black" }) => {
         />
       </svg>
       <p className="tagline">
-        “Health Warning! - New website is in process, coming up in the near
+        Health Warning! - New website is in process, coming up in the near
         future
       </p>
     </div>
