@@ -20,6 +20,10 @@ const Logo = ({ className, fill = "black" }) => {
 	c0,1.72,0.83,2.55,2.55,2.55h3.32V25.76z"
         />
       </svg>
+      <p className="tagline">
+        “Health Warning! - New website is in process, coming up in the near
+        future
+      </p>
     </div>
   )
 }

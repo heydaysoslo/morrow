@@ -66,10 +66,21 @@ const Page = styled.article`
     padding-top: ${SPACING / 4}px;
     padding-bottom: ${SPACING / 4}px;
 
+    .tagline {
+      max-width: 40ch;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #8754ff;
+      margin: 20px auto 0;
+    }
+
     @media screen and (min-width: 900px) {
       max-width: 570px;
       padding-top: ${SPACING / 2}px;
       padding-bottom: ${SPACING / 2}px;
+      .tagline {
+        font-size: 18px;
+      }
     }
   }
 `
